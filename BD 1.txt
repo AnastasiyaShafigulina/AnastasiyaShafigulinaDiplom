@@ -1,5 +1,5 @@
 SELECT cr.login,
-       COUNT (ord."inDelivery") AS quantity
+       COUNT (ord.id) AS quantity
 FROM "Couriers" AS cr
 INNER JOIN "Orders" AS ord ON cr.id=ord."courierId"
 WHERE ord."inDelivery"=true
